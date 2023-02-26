@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Date Pipe</title>
+    <title>Currency Pipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <h1></h1>
     <div>
-      <h1>
-        <p class="text">ANGULAR DATA PIPE</p>
-        <br />
-        {{ presentDate | date: 'longDate' }} &nbsp;&nbsp;|&nbsp;&nbsp;
-        {{ presentDate | date: 'M/dd/yyyy' }}
-
-        <br />
-        {{ presentDate | date: 'EEEE' }}
-        <br />
-        {{ todayO$ | async | date: 'mediumTime' }} {{ presentDate | date: 'z' }}
-      </h1>
+      <h1 class="title">Currency Pipe</h1>
+      <div class="card">
+        <div class="p">
+          <h1>Chinese Yuan</h1>
+          In China, one yuan is equal to : {{ yuan | currency: 'PHP' }}
+        </div>
+      </div>
+      <div class="card">
+        <div class="p">
+          <h1>Korean Won </h1>
+          In Korea, one yuan is equal to : {{ won | currency: 'PHP' }}
+        </div>
+      </div>
+      <div class="card">
+        <div class="p">
+          <h1>Saudi Riyal</h1>
+          Saudi, one riyal is equal to : {{ riyal | currency: 'PHP' }}
+        </div>
+      </div>
     </div>
   </body>
 </html>
